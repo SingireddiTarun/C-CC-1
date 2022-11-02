@@ -1,0 +1,64 @@
+31) S TarunBabu
+      2235313
+      C# CC answers
+
+
+
+1)using System;
+
+namespace RectangularArray
+{
+    class tarun
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a number");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[,] ar = new int[n, n];
+            int s, t;
+            ar = GetArray(n);
+
+            for (s = 0; s < n; s++)
+            {
+                for (t = 0; t < n; t++)
+                {
+                    Console.Write(ar[s, t] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+        public static int[,] GetArray(int a)
+        {
+            int[,] arr = new int[a, a];
+            int i, j;
+            for (i = 0; i < a; i++)
+            {
+
+                for (j = 0; j < a; j++)
+                {
+                    if (i == j)
+                    {
+                        arr[i, j] = 0;
+                    }
+                    else if (i < j)
+                    {
+                        arr[i, j] = 1;
+                    }
+                    else
+                    {
+                        arr[i, j] = -1;
+                    }
+
+
+                }
+            }
+            return arr;
+
+        }
+    }
+}
+
+
+
+         
+
